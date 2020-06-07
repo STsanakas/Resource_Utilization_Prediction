@@ -101,7 +101,7 @@ def main():
                           infS, infB = inference(regr, X_test)    
     dataset_name = mydatasetfile.split("/")[-1]
     mytime = round(time.time()-start)
-    print('XGBoost results using', dataset_name, 'as dataset')
+    print('SVM Regressor results using', dataset_name, 'as dataset')
     print('Best mse: %.6f	mae: %.6f	rmse: %.6f	training time: %.0f s' % (best_mse, best_mae, best_rmse, mytime))
     print('Single inference time: %.3f s	batch inference time: %.3f s ' % (infS, infB))
     print('RAM mse: %.6f	RAM mae: %.6f	RAM rmse: %.6f' % (best_mse_ram, best_mae_ram, math.sqrt(best_mse_ram)))
