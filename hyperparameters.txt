@@ -44,7 +44,7 @@ colsample_bytree is the subsample ratio of columns when constructing each tree. 
 SVM
 
 kernel = Kernel type of the Regressor. values:(linear, poly, rbf, sigmoid)
-degree = Degree of the polynomial kernel. values:(1, 2, 3, 4, 5, 6, 7)
+degree = Degree of the polynomial kernel. values:(1, 2, 3)
 gamma = Kernel coefficient used in polynomial, rbf and sigmoid. values:(scale, auto)
 value 'scale' means gamma = 1 / (n_features * X.var()), and value 'auto' means gamma = 1/n_features
 C = Regularization parameter. The strength of regularization is inversely proportional to this hyperparameter. values:(0.1, 0.5, 1.0, 1.5, 2.0, 3.0)
