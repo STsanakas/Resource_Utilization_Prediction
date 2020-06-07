@@ -392,3 +392,4 @@ print('Best mse: %.6f	mae: %.6f	rmse: %.6f	training time: %.0f s' % (mse, mae, m
 print('Single inference time: %.3f s	batch inference time: %.3f s ' % (infS, infB))
 print('RAM mse: %.6f	RAM mae: %.6f	RAM rmse: %.6f' % (mse_ram, mae_ram, math.sqrt(mse_ram)))
 print('CPU mse: %.6f	CPU mae: %.6f	CPU rmse: %.6f' % (mse_cpu, mae_cpu, math.sqrt(mse_cpu)))
+print('DeepLearning,',mytime,',',math.sqrt(mse),',',mae,',',infS,',',infB,',',math.sqrt(mse_cpu),',',mae_cpu,',',math.sqrt(mse_ram),',',mae_ram, file=open(mypath+'results.csv','a'))
