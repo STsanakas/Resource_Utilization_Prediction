@@ -20,34 +20,20 @@ batch_size: The size of training instances that the model trains for before reev
 epochs: The number of maximum epochs of training. The models are using early stopping to complete their training once they stop getting better. values:(20,50,100,200)
 
 
-sklearn MultiOutputRegressor
-This sklearn class helps us extend the regressors that do not support multi-output regression. It takes the input and uses it to train a separate regressor for each output. It is used on XGBoost, auto-sklearn and SVM methods.
-
-
 XGBoost
 
 learning_rate values:(0.05,0.15,0.3)
-
-max_depth: values:(3,5,10,15)
-Maximum depth of a tree. Increasing this value will make the model more complex and more likely to overfit.
-
-min_child_weight: values:(3,7)
-Minimum sum of instance weight (hessian) needed in a child. If the tree partition step results in a leaf node with the sum of instance weight less than min_child_weight, then the building process will give up further partitioning. In linear regression task, this simply corresponds to minimum number of instances needed to be in each node. The larger min_child_weight is, the more conservative the algorithm will be.
-
-gamma: values:(0,0.2,0.4)
-Minimum loss reduction required to make a further partition on a leaf node of the tree. The larger gamma is, the more conservative the algorithm will be.
-
-colsample_bytree: values:(0.3,0.7)
-colsample_bytree is the subsample ratio of columns when constructing each tree. Subsampling occurs once for every tree constructed.
+max_depth: Maximum depth of a tree. Increasing this value will make the model more complex and more likely to overfit. values:(3,5,10,15)
+min_child_weight: Minimum sum of instance weight (hessian) needed in a child. If the tree partition step results in a leaf node with the sum of instance weight less than min_child_weight, then the building process will give up further partitioning. In linear regression task, this simply corresponds to minimum number of instances needed to be in each node. The larger min_child_weight is, the more conservative the algorithm will be. values:(3,7)
+gamma: Minimum loss reduction required to make a further partition on a leaf node of the tree. The larger gamma is, the more conservative the algorithm will be. values:(0,0.2,0.4)
+colsample_bytree: colsample_bytree is the subsample ratio of columns when constructing each tree. Subsampling occurs once for every tree constructed. values:(0.3,0.7)
  
 
 SVM
 
-kernel = Kernel type of the Regressor. values:(linear, poly, rbf, sigmoid)
-degree = Degree of the polynomial kernel. values:(1, 2, 3)
-gamma = Kernel coefficient used in polynomial, rbf and sigmoid. values:(scale, auto)
+kernel: Kernel type of the Regressor. values:(linear, poly, rbf, sigmoid)
+degree: Degree of the polynomial kernel. values:(1, 2, 3)
+gamma: Kernel coefficient used in polynomial, rbf and sigmoid. values:(scale, auto)
 value 'scale' means gamma = 1 / (n_features * X.var()), and value 'auto' means gamma = 1/n_features
-C = Regularization parameter. The strength of regularization is inversely proportional to this hyperparameter. values:(0.1, 0.5, 1.0, 1.5, 2.0, 3.0)
-coef0 = Independent term in kernel function, used in poly and sigmoid kernels. values:( -2.0, -1.0, -0.5, -0.1, 0, 0.1, 0.5, 1.0, 2.0)
-
-*οι περιγραφές των υπερπαραμέτρων για SVM και XGBoost είναι από τα documentation pages
+C: Regularization parameter. The strength of regularization is inversely proportional to this hyperparameter. values:(0.1, 0.5, 1.0, 1.5, 2.0, 3.0)
+coef0: Independent term in kernel function, used in poly and sigmoid kernels. values:( -2.0, -1.0, -0.5, -0.1, 0, 0.1, 0.5, 1.0, 2.0)
